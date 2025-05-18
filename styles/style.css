@@ -104,6 +104,7 @@
   line-height: 18px;
   text-transform: lowercase;
   background-color: transparent;
+  transition: border 0.5s;
 }
 
 .header__theme-menu-button:hover {
@@ -121,6 +122,7 @@
 
 .header__theme-menu-button_active {
   border: 1px solid var(--decoration-color);
+  pointer-events: none;
 }
 
 .header__title {
@@ -143,21 +145,35 @@
   color: var(--section-title-color);
 }
 
-.content-section {
+.section {
   display: grid;
   gap: 20px;
 }
 
-.content-section__articles {
+.section__articles {
   display: grid;
   gap: 20px;
 }
 
-.article__title {
-  margin-block-end: 10px;
+.article {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-h4.article__title {
+.article__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.article__list-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.list-item__title {
   font-weight: normal;
 }
 
@@ -238,24 +254,24 @@ h4.article__title {
     margin-block: 60px;
   }
 
-  .content-section {
+  .section {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .first-section {
+  .section-why {
     gap: 40px;
   }
 
-  .first-section__articles {
+  .section-why__articles {
     grid-column: 2 / 4;
   }
 
-  .second-section__articles {
+  .section-causes__articles {
     grid-column: 1 / 4;
     grid-row: 2;
   }
 
-  .third-section__articles {
+  .section-advices__article {
     grid-column: 2 / 4;
     margin-inline-start: 7px;
   }
@@ -264,21 +280,21 @@ h4.article__title {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .first-image {
+  .image-sunset {
     grid-column: 1 / 3;
   }
 
-  .second-image {
+  .image-ice-cream {
     grid-column: 3;
     grid-row: 1 / 3;
   }
 
-  .third-image {
+  .image-tape {
     grid-column: 1;
     grid-row: 2 / 4;
   }
 
-  .fifth-image {
+  .image-street {
     grid-column: 2 / 4;
     grid-row: 3;
   }
@@ -294,15 +310,15 @@ h4.article__title {
     justify-content: center;
   }
 
-  .first-section {
+  .section-why {
     gap: 20px;
   }
 
-  .second-section__articles {
+  .section-causes__articles {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .third-section__articles {
+  .section-advices__article {
     margin-inline-start: 0;
   }
 }

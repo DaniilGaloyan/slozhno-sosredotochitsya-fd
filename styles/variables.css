@@ -3,7 +3,7 @@
   --page-bg-image: url(../images/cover-image-dark.png);
 
   /*Шрифты и текст*/
-  --fonts: 'IBM Plex mono', sans-serif;
+  --fonts: 'IBM Plex mono', monospace;
   --title-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
 
   /*Цветовая палитра*/
