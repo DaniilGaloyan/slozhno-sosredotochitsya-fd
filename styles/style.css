@@ -108,11 +108,15 @@
 
 .header__theme-menu-button:hover {
   border: 1px solid var(--button-hover-border-color);
+  cursor: pointer;
 }
 
 .header__theme-menu-button:focus {
-  border-bottom: 1px solid var(--decoration-color);
   outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-bottom: 1px solid var(--decoration-color);
 }
 
 .header__theme-menu-button_active {
@@ -161,7 +165,7 @@ h4.article__title {
   color: var(--text-color);
 }
 
-h2.title-decoration {
+.gallery-title {
   margin-block-end: var(--base-interval);
 }
 
@@ -175,6 +179,7 @@ h2.title-decoration {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
 }
 
 .text-link {
@@ -187,8 +192,11 @@ h2.title-decoration {
 }
 
 .text-link:focus {
-  border: 1px solid var(--text-color);
   outline: none;
+}
+
+.text-link:focus-visible {
+  outline: 1px solid var(--text-color);
 }
 
 /*FOOTER*/
