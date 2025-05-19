@@ -167,12 +167,6 @@
   gap: 20px;
 }
 
-.article__list-item {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
 .list-item__title {
   font-weight: normal;
 }
